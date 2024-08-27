@@ -1,0 +1,15 @@
+// abstracts
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+//base
+@import './base/font';
+@import './base/reset';
+@import './base/preset';
+
+//layout
+@import './layout/header';
+@import './layout/footer';
+
+//pages
+@import './pages/main';
