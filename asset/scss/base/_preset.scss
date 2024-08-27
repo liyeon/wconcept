@@ -8,6 +8,19 @@
     margin: -1px;
 }
 
-.skipNav{
-    
+#skipNav a{
+  position: absolute;
+  width: 100%;
+	top: -100px;
+	padding: 5px 0;
+	white-space: nowrap;
+	background: $white;
+	color: $primary;
+  text-align: center;
+	font-weight: $font-weight-semibold;
+	;
+}
+#skipNav a:focus,
+#skipNav a:active{
+	top: 0;
 }

@@ -2,89 +2,149 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W CONCEPT</title>
-  <link rel="stylesheet" href="./asset/css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>W CONCEPT</title>
+	<link rel="stylesheet" href="./asset/css/style.css">
 </head>
 
 <body>
-  <div id="skipNav">
-    <a href="#main">본문 내용 바로가기(Go to content)</a>
-    <a href="#actionbar">메인 메뉴 영역 바로가기(Go to main menu)</a>
-    <a href="#footer">하단 영역 바로가기(Go to footer)</a>
-  </div>
-  <div id="wrap">
-    <header class="header">
-      <div class="header__top">
-        <h1 class="header__logo">
-          <a href="#" class="header__logo-link">
-            <span class="blind">W CONCEPT</span>
-          </a>
-        </h1>
-        <div class="header__search">
-          <form action="" method="get" class="header__search-form">
-            <fieldset>
-              <legend class="blind">검색</legend>
-              <input type="text" class="header__search-input" />
-              <button type="submit" class="header__search-button">
-                <span class="blind">검색 버튼</span>
-              </button>
-            </fieldset>
-          </form>
-        </div>
-        <div class="header__auth">
-          <ul class="header__auth-list">
-            <li class="header__auth-item">
-              <a href="#" class="header__auth-link header__auth-link--join">
-                <span>JOIN</span>
-              </a>
-            </li>
-            <li class="header__auth-item">
-              <a href="#" class="header__auth-link header__auth-link--login">
-                <span>LOGIN</span>
-              </a>
-            </li>
-            <li class="header__auth-item">
-              <a href="#" class="header__auth-link header__auth-link--my">
-                <span>MY</span>
-              </a>
-            </li>
-            <li class="header__auth-item">
-              <a href="#" class="header__auth-link header__auth-link--cart" aria-label="장바구니">
-                <span>0</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <nav class="header__nav">
-        <div class="header__nav-sub">
-          <button type="button">CATEGORY</button>
-          <div class="header__nav-sub__content">
-            <div class="sub__content__category">
-              <a href="#">여성</a>
-              <div class="sub__content__category-wrap">
-                <ul class="category-list">
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul class="header__nav-list">
-          <li class="nav-item">
-            <a href="" class="nav-item__link"></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    
-    <main id="main">
+	<div id="skipNav">
+		<a href="#main">본문 내용 바로가기(Go to content)</a>
+		<a href="#actionbar">메인 메뉴 영역 바로가기(Go to main menu)</a>
+		<a href="#footer">하단 영역 바로가기(Go to footer)</a>
+	</div>
+	<div id="wrap">
+		<header class="header">
+			<div class="header__top">
+				<h1 class="logo">
+					<a href="#" class="logo__link">
+						<span class="blind">W CONCEPT</span>
+					</a>
+				</h1>
+				<div class="header__search">
+					<form action="" method="get" class="search__form">
+						<fieldset>
+							<legend class="blind">검색</legend>
+							<input type="text" class="search__input" />
+							<button type="submit" class="search__btn">
+								<span class="blind">검색 버튼</span>
+							</button>
+						</fieldset>
+					</form>
+				</div>
+				<div class="header__auth">
+					<ul class="auth__list">
+						<li class="auth__item">
+							<a href="#" class="auth__link--join">
+								<span>JOIN</span>
+							</a>
+						</li>
+						<li class="auth__item">
+							<a href="#" class="auth__link--login">
+								<span>LOGIN</span>
+							</a>
+						</li>
+						<li class="auth__item">
+							<a href="#" class="auth__link--my">
+								<span>MY</span>
+							</a>
+						</li>
+						<li class="auth__item">
+							<a href="#" class="auth__link--cart" aria-label="장바구니">
+								<span>0</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<nav class="nav">
+				<div class="nav__sub">
+					<button type="button" class="nav__btn">CATEGORY</button>
+					<div class="nav__content">
+						<div class="category">
+							<a href="#" class="category__link--woman">여성</a>
+							<div class="category__wrap">
+								<ul class="category__list">
+									<li class="category__item--title"><a href="#">의류</a></li>
+									<li class="category__item"><a href="#">아우터</a></li>
+									<li class="category__item"><a href="#">원피스</a></li>
+									<li class="category__item"><a href="#">블라우스</a></li>
+									<li class="category__item"><a href="#">셔츠</a></li>
+									<li class="category__item"><a href="#">티셔츠</a></li>
+									<li class="category__item"><a href="#">니트</a></li>
+									<li class="category__item"><a href="#">스커트</a></li>
+									<li class="category__item"><a href="#">팬츠</a></li>
+									<li class="category__item"><a href="#">데님</a></li>
+									<li class="category__item"><a href="#">라운지웨어</a></li>
+									<li class="category__item"><a href="#">언더웨어</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="nav__list">
+					<li class="nav__item"><a href="" class="nav__link">WOMEN</a></li>
+					<li class="nav__item"><a href="" class="nav__link">MEN</a></li>
+					<li class="nav__item"><a href="" class="nav__link">BEAUTY</a></li>
+					<li class="nav__item"><a href="" class="nav__link">LIFE</a></li>
+					<li class="nav__item"><a href="" class="nav__link">KIDS</a></li>
+					<li class="nav__item"><a href="" class="nav__link">BEST</a></li>
+					<li class="nav__item"><a href="" class="nav__link">SALE</a></li>
+					<li class="nav__item"><a href="" class="nav__link">NEW</a></li>
+					<li class="nav__item"><a href="" class="nav__link">EXCLUSIVE</a></li>
+					<li class="nav__item"><a href="" class="nav__link">ORIGINAL</a></li>
+					<li class="nav__item"><a href="" class="nav__link">브랜드</a></li>
+					<li class="nav__item"><a href="" class="nav__link">기획전</a></li>
+				</ul>
+			</nav>
+		</header>
+		<aside class="ad">
+			<a href="#"><img src="./asset/images/top_banner.jpg" alt="24FW 프리쇼 무제한 12% 쿠폰팩"></a>
+		</aside>
+		<main id="main">
 
-    </main>
-  </div>
+		</main>
+		<footer id="footer">
+			<h2 class="blind">푸터</h2>
+			<ul class="footer__list">
+				<li class="footer__item"><a href="#">회사소개</a></li>
+				<li class="footer__item"><a href="#">입점상담</a></li>
+				<li class="footer__item"><a href="#">제휴문의</a></li>
+				<li class="footer__item"><a href="#">이용약관</a></li>
+				<li class="footer__item"><a href="#">개인정보처리방침</a></li>
+				<li class="footer__item"><a href="#">고객센터</a></li>
+				<li class="footer__item"><a href="#">채용정보</a></li>
+				<li class="footer__item"><a href="#">GLOBAL</a></li>
+			</ul>
+			<div class="footer__bottom">
+				<address class="footer__addr">
+					<p class="addr">
+						<span>상호명 : ㈜더블유컨셉코리아</span>
+						<span>대표자 : 이주철</span>
+						<span>주소 : 서울특별시 강남구 테헤란로 231, EAST동 20층(역삼동, 센터필드)</span>
+					</p>
+					<p class="addr">
+						<span>사업자등록번호 : 211-88-19183</span>
+						<span>통신판매업신고 : 제2009호-서울강남-00847호 <a href="#">사업자정보확인</a></span>
+						<span>개인정보보호책임자 : 허선희</span>
+						<span>호스팅서비스 : ㈜ 더블유컨셉코리아</span>
+					</p>
+					<small class="copy">COPYRIGHT ⓒ ㈜더블유컨셉코리아 ALL RIGHTS RESERVED</small>
+				</address>
+				<div class="footer__compensate">
+					<strong>소비자피해보상보험</strong>
+					<p>
+						고객님은 안전거래를 위해 현금 결제 시, Wconcept 에서 가입한
+						소비자피해보상보험 서비스를 이용하실 수 있습니다.
+					</p>
+					<span>보상대상 : 미배송/반품, 환불거부/쇼핑몰부도</span>
+					<a href="#">서비스 가입사실 확인</a>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
 
 </html>

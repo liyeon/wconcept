@@ -132,6 +132,7 @@ input {
 }
 
 body {
+  min-width: 1240px;
   font-family: "proximanova", "NotoKR", sans-serif;
   color: #000;
   font-weight: 400;
@@ -142,9 +143,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
-  border: none;
+  border: 0;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 .blind {
@@ -154,4 +156,40 @@ select {
   overflow: hidden;
   clip: rect(0 0 0 0);
   margin: -1px;
+}
+
+#skipNav a {
+  position: absolute;
+  width: 100%;
+  top: -100px;
+  padding: 5px 0;
+  white-space: nowrap;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+}
+
+#skipNav a:focus,
+#skipNav a:active {
+  top: 0;
+}
+
+.ad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  overflow: hidden;
+}
+.ad a {
+  margin: 0 auto;
+}
+.ad a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
