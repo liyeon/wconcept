@@ -150,3 +150,9 @@ $flex-map:(
     color: $color;
   }
 }
+
+//bg
+@mixin bg($name, $path: "../images/") {
+	background-image: url("#{$path}/#{$name}");
+	background-repeat: no-repeat;
+}
