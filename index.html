@@ -1,17 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W CONCEPT</title>
+  <link rel="stylesheet" href="./asset/css/style.css">
 </head>
+
 <body>
+  <div id="skipNav">
+    <a href="#main">본문 내용 바로가기(Go to content)</a>
+    <a href="#actionbar">메인 메뉴 영역 바로가기(Go to main menu)</a>
+    <a href="#footer">하단 영역 바로가기(Go to footer)</a>
+  </div>
+  <div id="wrap">
+    <header class="header">
+      <div class="header__top">
+        <h1 class="header__logo">
+          <a href="#" class="header__logo-link">
+            <span class="blind">W CONCEPT</span>
+          </a>
+        </h1>
+        <div class="header__search">
+          <form action="" method="get" class="header__search-form">
+            <fieldset>
+              <legend class="blind">검색</legend>
+              <input type="text" class="header__search-input" />
+              <button type="submit" class="header__search-button">
+                <span class="blind">검색 버튼</span>
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="header__auth">
+          <ul class="header__auth-list">
+            <li class="header__auth-item">
+              <a href="#" class="header__auth-link header__auth-link--join">
+                <span>JOIN</span>
+              </a>
+            </li>
+            <li class="header__auth-item">
+              <a href="#" class="header__auth-link header__auth-link--login">
+                <span>LOGIN</span>
+              </a>
+            </li>
+            <li class="header__auth-item">
+              <a href="#" class="header__auth-link header__auth-link--my">
+                <span>MY</span>
+              </a>
+            </li>
+            <li class="header__auth-item">
+              <a href="#" class="header__auth-link header__auth-link--cart" aria-label="장바구니">
+                <span>0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="header__nav-sub">
+          <button type="button">CATEGORY</button>
+          <div class="header__nav-sub__content">
+            <div class="sub__content__category">
+              <a href="#">여성</a>
+              <div class="sub__content__category-wrap">
+                <ul class="category-list">
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="header__nav-list">
+          <li class="nav-item">
+            <a href="" class="nav-item__link"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     
-    
-테스트
-English
-    
+    <main id="main">
+
+    </main>
+  </div>
 </body>
+
 </html>
