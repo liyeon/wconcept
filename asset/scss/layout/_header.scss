@@ -1,13 +1,15 @@
-// header
+body{
+	height: 5000px;
+}// header
 .header {
+	background: $white;
 	@include column-flexbox;
-
 	&__top {
+		position: relative;
 		max-width: $max-width;
 		width: 100%;
-		height: 88px;
 		padding: 0 20px;
-		position: relative;
+		height: 88px;
 		// background-color: aquamarine;
 		@include flexbox(between, center);
 
@@ -25,7 +27,6 @@
 
 	&__search {
 		@include pos-center;
-		@include text-style(14);
 
 		// &-form{}
 		fieldset {
@@ -85,6 +86,9 @@
 		&-link--login::before {
 			@include bg('common/svg/ico_login.svg');
 		}
+		&-link--heart::before {
+			@include bg('common/svg/ico_heart_line_28.svg');
+		}
 
 		&-link--my::before {
 			@include bg('common/svg/ico_mypage.svg');
@@ -95,16 +99,157 @@
 		}
 	}
 
-
-
-
-
-
-
 	&__nav {
 		width: 100%;
-		height: 57px;
-		background-color: salmon;
+		border-bottom: 1px solid #e9e9e9;
+		position: relative;
+		background: $white;
+		&.fixed{
+			position: fixed;
+			top: 0;
+			left: 0;
+			.inner{
+				height: 70px;
+			}
+		}
+		.inner{
+			position: relative;
+			@include flexbox;
+			height: 57px;
+		}
+		&-btn{
+			position: absolute;
+			top: 0;
+			left: 20px;
+			width: 176px;
+			height: 48px;
+			font-weight: $font-weight-bold;
+			@include flexbox(between);
+			padding: 0 14px;
+			border: 1px solid #e9e9e9;
+			z-index: 3;
+			&::after{
+				content: '';
+				width: 12px;
+				height: 12px;
+				@include bg('common/svg/ico_cat_arrow_open_12.svg');
+			}
+			&.on{
+				border-bottom-color: $white;
+				&::after{
+					rotate: (180deg);
+				}
+			}
+		}
+		&-list{
+			@include flexbox;
+			gap: 26px;
+		}
+		&-item{
+			font-weight: $font-weight-bold;
+			@include flexbox;
+			gap: 26px;
+			&:nth-child(5)::after{
+				content: '';
+				width: 1px;
+				height: 14px;
+				background: #d9d9d9;
+			}
+		}
+		&-sub{
+			display: none;
+			width: 100%;
+			// border-top: 1px solid #e9e9e9;
+			position: absolute;
+			top: calc(100% - 10px);
+			background: $white;
+			border: 1px solid #e9e9e9;
+			border-right: 0;
+			border-left: 0;
+			z-index: 2;
+			&.active{
+				display: block;
+			}
+			.category{
+				margin: 0 auto;
+				padding: 30px 0 30px 35px;
+				max-width: $max-width;
+				min-height: 300px;
+				position: relative;
+				&__wrap{
+					display: none;
+					flex-wrap: wrap;
+					width: 1232px;
+					padding-left: 170px;
+					&.active{
+						@include flexbox(start,start);
+					}
+				}
+				&__link {
+					position: absolute;
+					left: 35px;
+					@include flexbox(between);
+					width: 155px;
+					@include text-style(16);
+					font-weight: $font-weight-bold;
+					&.on::after {
+						content: '';
+						width: 9px;
+						height: 10px;
+						@include bg('common/svg/ico_arrow_right_11.svg');
+						background-position: center;
+						background-size: 100%;
+					}
+					&.woman{
+						top: calc-top(1);
+					}
+					&.man{
+						top: calc-top(2);
+					}
+					&.beauty{
+						top: calc-top(3);
+					}
+					&.life{
+						top: calc-top(4);
+					}
+					&.kids{
+						top: calc-top(5);
+					}
+				}
+				&__list{
+					width: 177px;
+					min-width: 0;
+					padding: 0 20px 0 30px;
+				}
+				&__item{
+					@include text-style(13,#7b7b7b);
+					@include ellipsis;
+					margin-top: 5px;
+					&:hover{
+						color: $primary;
+					}
+					&.title{
+						margin-bottom: 7px;
+						@include text-style(14,$primary);
+						font-weight: $font-weight-bold;
+					}
+				}
+				&__list-banner{
+					@include flexbox;
+					padding-left: 30px;
+					margin-top: 50px;
+					gap: 16px;
+					&__item{
+						width: 129px;
+						figcaption{
+							@include text-style(12);
+							font-weight: $font-weight-semibold;
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.ad {

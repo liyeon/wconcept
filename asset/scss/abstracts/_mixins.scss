@@ -4,8 +4,7 @@
     overflow: hidden;
 }
 
-@mixin multi-ellipsis($font-size, $line-height, $lines) {
-    font-size: $font-size;
+@mixin multi-ellipsis($line-height, $lines) {
     line-height: $line-height;
     max-height: $line-height * $lines;
     overflow: hidden;
@@ -78,6 +77,9 @@ $flex-map:(
 @mixin text-style-12(){
 	font-size: $font-size-12;
 }
+@mixin text-style-13(){
+	font-size: $font-size-13;
+}
 @mixin text-style-14(){
 	font-size: $font-size-14;
 }
@@ -118,6 +120,9 @@ $flex-map:(
   @else if $size == 12 {
     @include text-style-12;
   }
+  @else if $size == 13 {
+    @include text-style-13;
+  }
   @else if $size == 14 {
     @include text-style-14;
   }
@@ -155,4 +160,9 @@ $flex-map:(
 @mixin bg($name, $path: "../images/") {
 	background-image: url("#{$path}/#{$name}");
 	background-repeat: no-repeat;
+}
+
+//서브메뉴 계산
+@function calc-top($index, $height: 47px, $offset: 12px) {
+  @return calc(#{$height} * $index - #{$offset});
 }

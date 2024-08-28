@@ -7,7 +7,11 @@
     clip: rect(0 0 0 0);
     margin: -1px;
 }
-
+.inner{
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
 #skipNav a{
   position: absolute;
   width: 100%;

@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>W CONCEPT</title>
 	<link rel="stylesheet" href="./asset/css/style.css">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- script -->
+	<script src="./asset/js/main.js" defer></script>
 </head>
 
 <body>
@@ -47,6 +52,11 @@
 							</a>
 						</li>
 						<li class="header__auth-item">
+							<a href="#" class="header__auth-link--heart">
+								<span>HEART</span>
+							</a>
+						</li>
+						<li class="header__auth-item">
 							<a href="#" class="header__auth-link--my">
 								<span>MY</span>
 							</a>
@@ -60,44 +70,153 @@
 				</div>
 			</div>
 			<nav class="header__nav">
-				<div class="nav__sub">
-					<button type="button" class="nav__btn">CATEGORY</button>
-					<div class="nav__content">
-						<div class="category">
-							<a href="#" class="category__link--woman">여성</a>
-							<div class="category__wrap">
-								<ul class="category__list">
-									<li class="category__item--title"><a href="#">의류</a></li>
-									<li class="category__item"><a href="#">아우터</a></li>
-									<li class="category__item"><a href="#">원피스</a></li>
-									<li class="category__item"><a href="#">블라우스</a></li>
-									<li class="category__item"><a href="#">셔츠</a></li>
-									<li class="category__item"><a href="#">티셔츠</a></li>
-									<li class="category__item"><a href="#">니트</a></li>
-									<li class="category__item"><a href="#">스커트</a></li>
-									<li class="category__item"><a href="#">팬츠</a></li>
-									<li class="category__item"><a href="#">데님</a></li>
-									<li class="category__item"><a href="#">라운지웨어</a></li>
-									<li class="category__item"><a href="#">언더웨어</a></li>
-								</ul>
-							</div>
+				<div class="inner">
+					<button type="button" class="header__nav-btn">
+						<span>CATEGORY</span>
+					</button>
+					<ul class="header__nav-list">
+						<li class="header__nav-item"><a href="" class="header__nav-link">WOMEN</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">MEN</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">BEAUTY</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">LIFE</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">KIDS</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">BEST</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">SALE</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">NEW</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">EXCLUSIVE</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">ORIGINAL</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">브랜드</a></li>
+						<li class="header__nav-item"><a href="" class="header__nav-link">기획전</a></li>
+					</ul>
+				</div>
+				<div class="header__nav-sub">
+					<div class="category">
+						<a href="#" class="category__link woman on" data-tab="#tab01">여성</a>
+						<div id="tab01" class="category__wrap active">
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">의류</a></li>
+								<li class="category__item"><a href="#">아우터</a></li>
+								<li class="category__item"><a href="#">원피스</a></li>
+								<li class="category__item"><a href="#">블라우스</a></li>
+								<li class="category__item"><a href="#">셔츠</a></li>
+								<li class="category__item"><a href="#">티셔츠</a></li>
+								<li class="category__item"><a href="#">니트</a></li>
+								<li class="category__item"><a href="#">스커트</a></li>
+								<li class="category__item"><a href="#">팬츠</a></li>
+								<li class="category__item"><a href="#">데님</a></li>
+								<li class="category__item"><a href="#">라운지웨어</a></li>
+								<li class="category__item"><a href="#">언더웨어</a></li>
+							</ul>
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">가방</a></li>
+								<li class="category__item"><a href="#">숄더백</a></li>
+								<li class="category__item"><a href="#">에코캔버스백</a></li>
+								<li class="category__item"><a href="#">크로스백</a></li>
+								<li class="category__item"><a href="#">토트백</a></li>
+								<li class="category__item"><a href="#">클러치</a></li>
+								<li class="category__item"><a href="#">백팩</a></li>
+								<li class="category__item"><a href="#">지갑</a></li>
+								<li class="category__item"><a href="#">백액세서리</a></li>
+								<li class="category__item"><a href="#">기타가방</a></li>
+							</ul>
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">신발</a></li>
+								<li class="category__item"><a href="#">스니커즈</a></li>
+								<li class="category__item"><a href="#">로퍼</a></li>
+								<li class="category__item"><a href="#">플랫슈즈</a></li>
+								<li class="category__item"><a href="#">펌프스</a></li>
+								<li class="category__item"><a href="#">샌들</a></li>
+								<li class="category__item"><a href="#">뮬/슬리퍼</a></li>
+								<li class="category__item"><a href="#">부츠</a></li>
+								<li class="category__item"><a href="#">시즈널슈즈</a></li>
+								<li class="category__item"><a href="#">슈즈액세서리</a></li>
+							</ul>
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">액세서리</a></li>
+								<li class="category__item"><a href="#">주얼리</a></li>
+								<li class="category__item"><a href="#">헤어액세서리</a></li>
+								<li class="category__item"><a href="#">14k골드</a></li>
+								<li class="category__item"><a href="#">모자</a></li>
+								<li class="category__item"><a href="#">시계</a></li>
+								<li class="category__item"><a href="#">스카프/머플러</a></li>
+								<li class="category__item"><a href="#">아이웨어</a></li>
+								<li class="category__item"><a href="#">패션액세서리</a></li>
+							</ul>
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">럭셔리</a></li>
+								<li class="category__item"><a href="#">럭셔리어패럴</a></li>
+								<li class="category__item"><a href="#">럭셔리백</a></li>
+								<li class="category__item"><a href="#">럭셔리슈즈</a></li>
+								<li class="category__item"><a href="#">럭셔리액세서리</a></li>
+							</ul>
+							<ul class="category__list">
+								<li class="category__item title"><a href="#">레저</a></li>
+								<li class="category__item"><a href="#">골프</a></li>
+								<li class="category__item"><a href="#">애슬레저</a></li>
+								<li class="category__item"><a href="#">스윔웨어</a></li>
+								<li class="category__item"><a href="#">스포츠웨어</a></li>
+							</ul>
+							<ul class="category__list-banner">
+								<li class="category__list-banner__item">
+									<a href="">
+										<figure class="category__list-banner--thumb">
+											<img src="./asset/images/category/woman/01.jpg" alt>
+											<figcaption>LABEL</figcaption>
+										</figure>
+									</a>
+								</li>
+								<li class="category__list-banner__item">
+									<a href="">
+										<figure class="category__list-banner--thumb">
+											<img src="./asset/images/category/woman/02.jpg" alt>
+											<figcaption>OUTLET</figcaption>
+										</figure>
+									</a>
+								</li>
+								<li class="category__list-banner__item">
+									<a href="">
+										<figure class="category__list-banner--thumb">
+											<img src="./asset/images/category/woman/03.jpg" alt>
+											<figcaption>LUXURYZONE</figcaption>
+										</figure>
+									</a>
+								</li>
+								<li class="category__list-banner__item">
+									<a href="">
+										<figure class="category__list-banner--thumb">
+											<img src="./asset/images/category/woman/04.jpg" alt>
+											<figcaption>CASUAL</figcaption>
+										</figure>
+									</a>
+								</li>
+								<li class="category__list-banner__item">
+									<a href="">
+										<figure class="category__list-banner--thumb">
+											<img src="./asset/images/category/woman/05.jpg" alt>
+											<figcaption>ACTIVESHOP</figcaption>
+										</figure>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="category__link man" data-tab="#tab02">남성</a>
+						<div id="tab02" class="category__wrap">
+							남성
+						</div>
+						<a href="#" class="category__link beauty" data-tab="#tab03">뷰티</a>
+						<div id="tab03" class="category__wrap">
+							뷰티
+						</div>
+						<a href="#" class="category__link life" data-tab="#tab04">라이프</a>
+						<div id="tab04" class="category__wrap">
+							라이프
+						</div>
+						<a href="#" class="category__link kids" data-tab="#tab05">키즈</a>
+						<div id="tab05" class="category__wrap">
+							키즈
 						</div>
 					</div>
 				</div>
-				<ul class="nav__list">
-					<li class="nav__item"><a href="" class="nav__link">WOMEN</a></li>
-					<li class="nav__item"><a href="" class="nav__link">MEN</a></li>
-					<li class="nav__item"><a href="" class="nav__link">BEAUTY</a></li>
-					<li class="nav__item"><a href="" class="nav__link">LIFE</a></li>
-					<li class="nav__item"><a href="" class="nav__link">KIDS</a></li>
-					<li class="nav__item"><a href="" class="nav__link">BEST</a></li>
-					<li class="nav__item"><a href="" class="nav__link">SALE</a></li>
-					<li class="nav__item"><a href="" class="nav__link">NEW</a></li>
-					<li class="nav__item"><a href="" class="nav__link">EXCLUSIVE</a></li>
-					<li class="nav__item"><a href="" class="nav__link">ORIGINAL</a></li>
-					<li class="nav__item"><a href="" class="nav__link">브랜드</a></li>
-					<li class="nav__item"><a href="" class="nav__link">기획전</a></li>
-				</ul>
 			</nav>
 			<aside class="ad">
 				<a href="#"><img src="./asset/images/top_banner.jpg" alt="24FW 프리쇼 무제한 12% 쿠폰팩"></a>

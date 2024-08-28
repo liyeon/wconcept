@@ -75,6 +75,7 @@ input {
 body {
 	min-width: $width;
 	font-family: $font-main;
+	@include text-style(14);
 	color: $primary;
 	font-weight: $font-weight-regular;
 }
