@@ -16,10 +16,9 @@
     @include flexbox;
   }
   &__bottom{
-    height: 137px;
     max-width: $width;
     margin: 0 auto;
-		padding: 40px 0 0 0;
+		padding: 40px 0;
     @include flexbox(between, start);
 		@include text-style(12,$gray-coal);
 		line-height: 20px;

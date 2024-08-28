@@ -30,9 +30,11 @@
 }
 
 .side-btn{
+	z-index: 999;
 	position: fixed;
 	bottom: 40px;
-	right:42px;
+	right:50%;
+	margin-right: -770px;
 	@include column-flexbox;
 	gap: 6px;
 	button{

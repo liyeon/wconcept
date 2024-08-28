@@ -38,7 +38,9 @@ $($cateLink).hover(function (e) {
 });
 
 //header 축소
-
+// 초기 높이 설정
+$('.side-btn__wrap.bottom').css('--height', '42px');
+$('.side-btn__wrap.top').css('--height', '0px');
 $(window).scroll(function (e) { 
 	const $scrollTop = $(this).scrollTop();
   if ($scrollTop > 100) { // 스크롤이 100px 이상일 때
@@ -74,4 +76,24 @@ $('.side-btn__wrap.bottom .btn-arrow').on('click', function() {
 	const $documentHeight = $(document).height();
 	$('html, body').animate({ scrollTop: $documentHeight - $(window).height() }, 400);
 	return false; 
+});
+
+
+// 메인 슬라이드
+const visual = new Swiper(".visualSwiper", {
+	slidesPerView: 'auto', // 자동으로 슬라이드 크기에 맞게 조정
+	centeredSlides: true, // 슬라이드를 중앙에 배치
+	loop: true, // 루프 모드 활성화
+	loopAdditionalSlides : 1, 
+	spaceBetween: 2, // 슬라이드 사이의 간격
+	grabCursor: true, // 드래그 커서
+  autoplay:{
+		delay:4000, // 4초
+		disableOnInteraction: false     // 사용자가 건들더라도 자동재생유지
+  },
+	navigation: {
+		nextEl: ".next",
+		prevEl: ".prev",
+	},
+	speed:500,
 });
