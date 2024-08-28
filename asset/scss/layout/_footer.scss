@@ -1,1 +1,24 @@
 // footer
+.footer{
+  margin-top: 70px;
+  &__top{
+    background: #848484;
+    color: $white;
+  }
+  &__list{
+    height: 57px;
+    @include flexbox;
+    max-width: $width;
+    margin: 0 auto;
+  }
+  &__item{
+    flex: 1;
+    @include flexbox;
+  }
+  &__bottom{
+    height: 137px;
+    max-width: $width;
+    margin: 0 auto;
+    @include flexbox(between, center);
+  }
+}
