@@ -40,9 +40,38 @@ $($cateLink).hover(function (e) {
 //header 축소
 
 $(window).scroll(function (e) { 
-  if ($(this).scrollTop() > 100) { // 스크롤이 100px 이상일 때
+	const $scrollTop = $(this).scrollTop();
+  if ($scrollTop > 100) { // 스크롤이 100px 이상일 때
     $('.header__nav').addClass('fixed');
   } else {
     $('.header__nav').removeClass('fixed');
   }
+	// 현재 스크롤 위치 + 창의 높이
+	const $scrollPosition = $scrollTop + $(window).height();
+	// 문서의 전체 높이
+	const $documentHeight = $(document).height();
+
+	//스크롤 탑일 때
+	if ($scrollTop === 0) { 
+		// alert('팁')
+		$('.side-btn__wrap.bottom').css('--height','42px');
+		$('.side-btn__wrap.top').css('--height', '0px');
+  } else if($scrollPosition >= $documentHeight){
+		$('.side-btn__wrap.top').css('--height','42px');
+		$('.side-btn__wrap.bottom').css('--height', '0px');
+	}else{
+		$('.side-btn__wrap.top').css('--height','42px');
+		$('.side-btn__wrap.bottom').css('--height','42px');
+	}
+});
+
+$('.side-btn__wrap.top .btn-arrow').on('click', function() {
+	$('html, body').animate({ scrollTop: 0 }, 400);
+	return false; // 클릭 시 기본 동작 방지
+});
+$('.side-btn__wrap.bottom .btn-arrow').on('click', function() {
+	// 클릭 시 최신 문서 높이 계산
+	const $documentHeight = $(document).height();
+	$('html, body').animate({ scrollTop: $documentHeight - $(window).height() }, 400);
+	return false; 
 });
