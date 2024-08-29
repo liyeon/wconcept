@@ -126,3 +126,34 @@
 		}
 	}
 }
+.headline{
+	@include text-style(48, $secondary);
+	font-weight: $font-weight-thin;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 15px;
+}
+// make it yours
+.sc-product{
+	&__yours{
+		width: 100%;
+		padding: 0 80px;
+		position: relative;
+		.card-list{
+			gap: 0;
+		}
+		.card-item{
+			width: 233px;
+			&__thumb{
+				width: 233px;
+				height: 310px;
+			}
+		}
+	}
+	&__beauty{
+		margin: 100px auto 120px auto;
+		.headline{
+			position: relative;
+		}
+	}
+}

@@ -187,7 +187,7 @@ select {
   position: fixed;
   bottom: 40px;
   right: 50%;
-  margin-right: -770px;
+  margin-right: -896px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,6 +231,172 @@ select {
 }
 .side-btn__wrap.top button {
   rotate: 180deg;
+}
+
+.card-item__tag .tag {
+  border: 1px solid #000;
+}
+
+.swiper-btn__wrap .btn::after {
+  background-image: url("../images//common/spr-common.png");
+  background-repeat: no-repeat;
+}
+
+.swiper-btn__wrap .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70px;
+  height: 96px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  padding: 20px;
+}
+.swiper-btn__wrap .btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.swiper-btn__wrap .btn.prev {
+  left: 0;
+}
+.swiper-btn__wrap .btn.prev::after {
+  background-position: -510px -30px;
+}
+.swiper-btn__wrap .btn.next {
+  right: 0;
+}
+.swiper-btn__wrap .btn.next::after {
+  background-position: -540px -30px;
+}
+
+.btn-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-left: 180px;
+  width: 33px;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.btn-plus::before, .btn-plus::after {
+  content: "";
+  width: 1px;
+  height: 35px;
+  background-color: #000;
+}
+.btn-plus::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.btn-plus::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 35px;
+  height: 1px;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.card-item {
+  min-width: 0;
+}
+.card-item__thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-item__text {
+  padding: 0 4px 0 6px;
+}
+.card-item__text-title .brand {
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 16px;
+  margin: 16px 0 7px 0;
+}
+.card-item__text-title .front {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #777;
+}
+.card-item__text-title .product {
+  line-height: 16px;
+  max-height: 32px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; /* autoprefixer: off */
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #777;
+}
+.card-item__price {
+  position: relative;
+}
+.card-item__price .discount {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  margin-right: 4px;
+}
+.card-item__price .original {
+  font-size: 12px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.card-item__price .rate {
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ff4000;
+}
+.card-item__tag {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.card-item__tag .tag {
+  padding: 1px 5px;
+  border-color: #959595;
+  background: #fff;
+  color: #888;
+  width: auto;
+  text-indent: initial;
+  font-size: 11px;
+  line-height: 14px;
 }
 
 .header {
@@ -845,4 +1011,35 @@ select {
 }
 .ad-banner a:last-child {
   background: #dc9495;
+}
+
+.headline {
+  font-size: 48px;
+  color: #333;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sc-product__yours {
+  width: 100%;
+  padding: 0 80px;
+  position: relative;
+}
+.sc-product__yours .card-list {
+  gap: 0;
+}
+.sc-product__yours .card-item {
+  width: 233px;
+}
+.sc-product__yours .card-item__thumb {
+  width: 233px;
+  height: 310px;
+}
+.sc-product__beauty {
+  margin: 100px auto 120px auto;
+}
+.sc-product__beauty .headline {
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

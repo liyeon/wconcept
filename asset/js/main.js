@@ -89,11 +89,23 @@ const visual = new Swiper(".visualSwiper", {
 	grabCursor: true, // 드래그 커서
   autoplay:{
 		delay:4000, // 4초
-		disableOnInteraction: false     // 사용자가 건들더라도 자동재생유지
+		disableOnInteraction: false     // 사용자가건들더라도 자동재생유지
   },
 	navigation: {
 		nextEl: ".next",
 		prevEl: ".prev",
+	},
+	speed:500,
+});
+const yours = new Swiper(".yoursSwiper", {
+	slidesPerView: 'auto',
+	loop: true, // 루프 모드 활성화
+	loopAdditionalSlides : 1, 
+	spaceBetween: 20,
+	grabCursor: true, // 드래그 커서
+	navigation: {
+		nextEl: ".sc-product__yours .next",
+		prevEl: ".sc-product__yours .prev",
 	},
 	speed:500,
 });
