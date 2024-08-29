@@ -233,13 +233,28 @@ select {
   rotate: 180deg;
 }
 
-.card-item__tag .tag {
+.sc-product__beauty-wrap .beautySwiper .group-text .desc, .card-item__tag .tag {
   border: 1px solid #000;
 }
 
-.swiper-btn__wrap .btn::after {
+.card-item .btn-wish, .swiper-btn__wrap .btn::after {
   background-image: url("../images//common/spr-common.png");
   background-repeat: no-repeat;
+}
+
+.swiper-pagination {
+  bottom: 20px !important;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
 .swiper-btn__wrap .btn {
@@ -323,6 +338,23 @@ select {
 
 .card-item {
   min-width: 0;
+  position: relative;
+}
+.card-item .btn-wish {
+  width: 18px;
+  height: 17px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-position: -330px 0;
+  z-index: 10;
+}
+.card-item .btn-wish.on {
+  background-position: -360px 0;
+}
+.card-item__thumb {
+  width: 100%;
+  height: 310px;
 }
 .card-item__thumb img {
   width: 100%;
@@ -1042,4 +1074,142 @@ select {
 }
 .sc-product__beauty .headline {
   position: relative;
+}
+.sc-product__beauty-wrap {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.sc-product__beauty-wrap .beautySwiper {
+  margin: 0;
+  width: 752px;
+}
+.sc-product__beauty-wrap .beautySwiper .swiper-slide > a {
+  position: relative;
+}
+.sc-product__beauty-wrap .beautySwiper .btn::after {
+  background-position: -330px -30px;
+}
+.sc-product__beauty-wrap .beautySwiper .prev::after {
+  rotate: 180deg;
+}
+.sc-product__beauty-wrap .beautySwiper .group-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+.sc-product__beauty-wrap .beautySwiper .group-text .title {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.sc-product__beauty-wrap .beautySwiper .group-text .sub {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.sc-product__beauty-wrap .beautySwiper .group-text .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  padding: 0 28px;
+  font-size: 16px;
+  color: #fff;
+  border-color: #fff;
+}
+.sc-product__beauty-wrap .card-list {
+  width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.sc-product__beauty-wrap .card-item__thumb {
+  height: 266px;
+}
+.sc-product__event .eventSwiper .swiper-slide > a {
+  position: relative;
+}
+.sc-product__event .eventSwiper .btn::after {
+  background-position: -330px -30px;
+}
+.sc-product__event .eventSwiper .prev::after {
+  rotate: 180deg;
+}
+.sc-product__event .group-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sc-product__event .group-text .title {
+  font-size: 48px;
+  color: #333;
+  font-weight: 400;
+}
+.sc-product__event .group-text .sub {
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+}
+.sc-product__event .group-text .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+  min-width: 180px;
+  height: 50px;
+  padding: 0 46px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  border: 2px solid #333;
+}
+.sc-product__event .group-text.white .title {
+  color: #fff;
+}
+.sc-product__event .group-text.white .sub {
+  color: #fff;
+}
+.sc-product__event .group-text.white .desc {
+  color: #fff;
+  border: 1px solid #fff;
 }/*# sourceMappingURL=style.css.map */

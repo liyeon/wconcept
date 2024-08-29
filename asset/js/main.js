@@ -109,3 +109,33 @@ const yours = new Swiper(".yoursSwiper", {
 	},
 	speed:500,
 });
+const beauty = new Swiper(".beautySwiper", {
+	slidesPerView: 'auto',
+	loop: true, // 루프 모드 활성화
+	loopAdditionalSlides : 1, 
+	grabCursor: true, // 드래그 커서
+	pagination:{
+		el: ".swiper-pagination",
+		clickable: true, // 클릭 가능 여부
+	},
+	navigation: {
+		nextEl: ".next",
+		prevEl: ".prev",
+	},
+	speed:500,
+});
+const event = new Swiper(".eventSwiper", {
+	slidesPerView: 'auto',
+	loop: true, // 루프 모드 활성화
+	loopAdditionalSlides : 1, 
+	grabCursor: true, // 드래그 커서
+	pagination:{
+		el: ".swiper-pagination",
+		clickable: true, // 클릭 가능 여부
+	},
+	navigation: {
+		nextEl: ".next",
+		prevEl: ".prev",
+	},
+	speed:500,
+});

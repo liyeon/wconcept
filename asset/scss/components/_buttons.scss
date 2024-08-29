@@ -6,6 +6,18 @@
 %spr-common{
 	@include bg('common/spr-common.png');
 }
+.swiper-pagination{
+	bottom: 20px !important;
+}
+.swiper .swiper-pagination-bullet{
+	width: 10px;
+	height: 10px;
+	background-color: $primary;
+	opacity: .4;
+}
+.swiper .swiper-pagination-bullet-active{
+	opacity: 1;
+}
 .swiper-btn__wrap{
 	.btn {
 		display: flex;
@@ -20,7 +32,7 @@
 			height: 100%;
 			@extend %spr-common;
 		}
-
+		
 		&.prev {
 			left: 0;
 			&::after{
@@ -61,4 +73,3 @@
     height: 1px;
 	}
 }
-

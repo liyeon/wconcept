@@ -155,5 +155,103 @@
 		.headline{
 			position: relative;
 		}
+		&-wrap{
+			padding: 0 10px;
+			@include flexbox(between,start);
+			.beautySwiper{
+				margin: 0;
+				width: 752px;
+				.swiper-slide > a{
+					position: relative;
+				}
+				.btn::after{
+					background-position: -330px -30px;
+				}
+				.prev::after{
+					rotate: (180deg);
+				}
+				.group-text{
+					@include pos-center;
+					z-index: 10;
+					text-align: center;
+					.title{
+						@include text-style(60,$white);
+						margin-bottom: 25px;
+					}
+					.sub{
+						@include text-style(18, $white);
+						margin-bottom: 30px;
+					}
+					.desc{
+						@include flexbox;
+						height: 50px;
+						padding: 0 28px;
+						@include text-style(16, $white);
+						@extend %border;
+						border-color: $white;
+					}
+				}
+			}
+			.card-list{
+				width: 1080px;
+				display: grid;
+				grid-template-columns: repeat(5,1fr);
+			}
+			.card-item{
+				&__thumb{
+					height: 266px;
+				}
+			}
+		}
+	}
+
+	&__event{
+		.eventSwiper{
+			.swiper-slide > a{
+				position: relative;
+			}
+			.btn::after{
+				background-position: -330px -30px;
+			}
+			.prev::after{
+				rotate: (180deg);
+			}
+		}
+		.group-text{
+			@include pos-center;
+			z-index: 10;
+			text-align: center;
+			@include column-flexbox;
+			.title{
+				@include text-style(48,$secondary);
+				font-weight: $font-weight-regular;
+			}
+			.sub{
+				@include text-style(12, $secondary);
+				font-weight: $font-weight-regular;
+			}
+			.desc{
+				@include flexbox;
+				margin-top: 35px;
+				min-width: 180px;
+				height: 50px;
+				padding: 0 46px;
+				@include text-style(14, $primary);
+				font-weight: $font-weight-semibold;
+				border : 2px solid $secondary;
+			}
+			&.white{
+				.title{
+					color: $white;
+				}
+				.sub{
+					color: $white;
+				}
+				.desc{
+					color: $white;
+					border : 1px solid $white;
+				}
+			}
+		}
 	}
 }
