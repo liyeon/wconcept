@@ -9,6 +9,7 @@
 }
 .inner{
   width: 100%;
+	min-width: $width;
   max-width: $max-width;
   margin: 0 auto;
 }
@@ -22,7 +23,6 @@
 	color: $primary;
   text-align: center;
 	font-weight: $font-weight-semibold;
-	;
 }
 #skipNav a:focus,
 #skipNav a:active{

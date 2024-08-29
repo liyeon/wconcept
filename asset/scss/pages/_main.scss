@@ -288,4 +288,209 @@
 			}
 		}
 	}
+	&__wdna{
+		margin: 90px 0;
+		&-list{
+			@include flexbox;
+			@include text-style(16, $gray-cloud);
+			font-weight: $font-weight-semibold;
+			gap: 40px;
+			transition: all ease-in-out .2s;
+		}
+		&-item{
+			position: relative;
+			&.active,&:hover{
+				color: $secondary;
+				&::after{
+					content: '';
+					position: absolute;
+					margin-top: 3px;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background: $primary;
+				}
+			}
+		}
+		&-tab{
+			margin-top: 40px;
+			padding: 0 10px;
+			&--list{
+				@include flexbox;
+				gap: 25px;
+			}
+			&--item{
+				position: relative;
+				.thumb{
+					aspect-ratio: 1/1;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+				.insta{
+					@include flexbox(start,center);
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 45px;
+					background: $opacity-black-20;
+					overflow: hidden;
+					min-width: 0;
+					.account{
+						padding: 0 45px 0 25px;
+						@include text-style(15,$white);
+						font-weight: $font-weight-regular;
+						@include ellipsis;
+					}
+					.btn-wish{
+						width: 18px;
+						height: 18px;
+						top: auto;
+						right: 25px;
+						@include bg('common/svg/ico_heart_line_28.svg');
+						background-size: cover;
+						background-position: 0 0;
+						filter: invert(100%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.ad-benefit{
+	width: 1280px;
+	margin: 0 auto;
+	display: flex;
+}
+
+
+.sc-info{
+	width: 1280px;
+	margin: 80px auto 120px auto;
+	@include flexbox(between,end);
+	&__board{
+		position: relative;
+		width: 575px;
+		min-width: 0;
+		.btn-more{
+			position: absolute;
+			top: 12px;
+			right: 0;
+			width: 13px;
+			height: 13px;
+			@extend %spr-customer;
+			background-position: -200px 0;
+		}
+		&-tab{
+			display: flex;
+			border-bottom: 2px solid #000;
+			a{
+				@include text-style(22,#a3a3a3);
+				text-transform: uppercase;
+				padding: 0 33px 20px 0;
+				font-weight: $font-weight-light;
+				&.active{
+					color: $primary;
+				}
+			}
+		}
+		&-list{
+			margin-top: 22px;
+			padding-left: 18px;
+		}
+		&-item{
+			list-style: outside;
+			a{
+				min-width: 0;
+				@include flexbox(between);
+			}
+			& + &{
+				margin-top: 12px;
+			}
+			.title{
+				flex: 1;
+				@include ellipsis;
+			}
+			.date{
+				width: 100px;
+				text-align: right;
+				font-weight: $font-weight-light;
+			}
+		}
+	}
+	&__help{
+		width: 575px;
+		padding: 45px 70px 0 0;
+		&-desk{
+			margin-bottom: 50px;
+			.title{
+				@include text-style(22);
+			}
+			.tel{
+				@include text-style(42);
+				font-weight: $font-weight-medium;
+				margin-left: 40px;
+			}
+			.hour{
+				font-weight: $font-weight-light;
+				display: block;
+				line-height: 24px;
+			}
+			.mail{
+				font-weight: $font-weight-light;
+				display: block;
+				line-height: 24px;
+			}
+		}
+		&-media{
+			@include flexbox(between);
+			&--link{
+				display: flex;
+				gap: 10px;
+				a{
+					@extend %border;
+					width: 95px;
+					height: 38px;
+					@include flexbox;
+				}
+			}
+			&--sns{
+				display: flex;
+				gap: 10px;
+				a{
+					width: 31px;
+					height: 31px;
+					background-color: $primary;
+					border-radius: 50%;
+					position: relative;
+					&::after{
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 31px;
+						height: 31px;
+						@include bg('common/spr-footer.png');
+						background-position: 0 0;
+						background-size: 800%;
+						background-position: 2px -48px;
+					}
+					&.insta::after{
+						background-position: -47px -48px;
+					}
+					&.pint::after{
+						background-position: -97px -47px;
+					}
+					&.youtube::after{
+						background-position: -147px -48px;
+					}
+				}
+			}
+		}
+	}
 }

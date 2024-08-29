@@ -6,6 +6,9 @@
 %spr-common{
 	@include bg('common/spr-common.png');
 }
+%spr-customer{
+	@include bg('common/spr-customer.png');
+}
 .swiper-pagination{
 	bottom: 20px !important;
 }
@@ -72,4 +75,17 @@
 		width: 35px;
     height: 1px;
 	}
+}
+.btn-wish{
+	&.on{
+		background-position: -360px 0;
+	}
+	width: 18px;
+	height: 17px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	@extend %spr-common;
+	background-position: -330px 0; 
+	z-index: 10;
 }
