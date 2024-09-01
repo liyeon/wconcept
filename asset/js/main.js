@@ -41,13 +41,20 @@ $($cateLink).hover(function (e) {
 // 초기 높이 설정
 $('.side-btn__wrap.bottom').css('--height', '42px');
 $('.side-btn__wrap.top').css('--height', '0px');
+const $headerOffsetTop = $('.header__nav').offset().top;
 $(window).scroll(function (e) { 
 	const $scrollTop = $(this).scrollTop();
-  if ($scrollTop > 100) { // 스크롤이 100px 이상일 때
-    $('.header__nav').addClass('fixed');
-  } else {
-    $('.header__nav').removeClass('fixed');
-  }
+
+	if($scrollTop >= $headerOffsetTop){
+		$('.header__nav').addClass('fixed');
+	}else{
+		$('.header__nav').removeClass('fixed');
+	}
+  // if ($scrollTop > 100) { // 스크롤이 100px 이상일 때
+  //   $('.header__nav').addClass('fixed');
+  // } else {
+  //   $('.header__nav').removeClass('fixed');
+  // }
 	// 현재 스크롤 위치 + 창의 높이
 	const $scrollPosition = $scrollTop + $(window).height();
 	// 문서의 전체 높이
@@ -98,7 +105,7 @@ const visual = new Swiper(".visualSwiper", {
 	speed:500,
 });
 const yours = new Swiper(".yoursSwiper", {
-	slidesPerView: 'auto',
+	slidesPerView: 5,
 	loop: true, // 루프 모드 활성화
 	loopAdditionalSlides : 1, 
 	spaceBetween: 20,
@@ -108,6 +115,14 @@ const yours = new Swiper(".yoursSwiper", {
 		prevEl: ".sc-product__yours .prev",
 	},
 	speed:500,
+	breakpoints:{
+		1600:{
+			slidesPerView:6,
+		},
+		1920:{
+			slidesPerView:7,
+		}
+	}
 });
 const beauty = new Swiper(".beautySwiper", {
 	slidesPerView: 'auto',

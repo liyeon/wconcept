@@ -166,6 +166,10 @@ select {
   margin: 0 auto;
 }
 
+#wrap {
+  padding-top: 233px;
+}
+
 #skipNav a {
   position: absolute;
   width: 100%;
@@ -440,6 +444,9 @@ select {
 
 .header {
   background: #fff;
+  width: 100%;
+  top: 0;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -910,7 +917,7 @@ select {
 .sc-visual .visualSwiper:hover .btn {
   background: rgba(0, 0, 0, 0.7);
 }
-.sc-visual .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):before {
+.sc-visual .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next)::before {
   content: "";
   position: absolute;
   z-index: 5;
@@ -920,9 +927,10 @@ select {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 }
+.sc-visual .swiper-wrapper {
+  margin-left: -335.5px;
+}
 .sc-visual .swiper-slide {
-  -webkit-transform: translateX(326px);
-          transform: translateX(326px);
   width: 662px;
   height: 100%;
   position: relative;
@@ -982,33 +990,20 @@ select {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
-.sc-visual .swiper-btn__wrap {
+.sc-visual .btn {
   position: absolute;
   top: 50%;
+  left: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 7;
-  width: 100%;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.sc-visual .swiper-btn__wrap .btn {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 70px;
   height: 70px;
 }
-.sc-visual .swiper-btn__wrap .btn::after {
+.sc-visual .btn::after {
   content: "";
   background-image: url("../images//common/svg/btn_prev_white.svg");
   background-repeat: no-repeat;
@@ -1016,12 +1011,14 @@ select {
   width: 100%;
   height: 100%;
 }
-.sc-visual .swiper-btn__wrap .btn.prev {
-  margin-right: 1267px;
+.sc-visual .btn.prev {
+  margin-left: -667px;
 }
-.sc-visual .swiper-btn__wrap .btn.next {
+.sc-visual .btn.next {
+  margin-left: 589px;
+}
+.sc-visual .btn.next::after {
   rotate: 180deg;
-  margin-left: 1245PX;
 }
 
 .ad-banner {

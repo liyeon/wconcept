@@ -1,6 +1,9 @@
 // header
 .header {
 	background: $white;
+	width: 100%;
+	top: 0;
+	position: absolute;
 	@include column-flexbox;
 	&__top {
 		position: relative;
