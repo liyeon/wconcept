@@ -6,7 +6,8 @@
   min-width: 0;
   position: relative;
   &__thumb{
-    width: 100%;
+		position: relative;
+    width: 233px;
     height: 310px;
     img{
       width: 100%;

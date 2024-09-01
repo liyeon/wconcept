@@ -364,7 +364,8 @@ select {
   position: relative;
 }
 .card-item__thumb {
-  width: 100%;
+  position: relative;
+  width: 233px;
   height: 310px;
 }
 .card-item__thumb img {
@@ -1072,7 +1073,7 @@ select {
 }
 .sc-product__yours .card-item__thumb {
   position: relative;
-  width: 100%;
+  width: 233px;
   height: 310px;
 }
 .sc-product__beauty {
