@@ -1,3 +1,8 @@
+	$(".btn-wish").click(function (e) { 
+		e.preventDefault();
+		$(this).toggleClass('on');
+	});
+
 const $navBtn = $('.header__nav-btn');
 const $navSub = $('.header__nav-sub');
 const $cateLink = $('.category__link');
@@ -39,6 +44,9 @@ $($cateLink).hover(function (e) {
 
 //header 축소
 // 초기 높이 설정
+const $headerHeight = $('.header').outerHeight();
+$('#wrap').css('padding-top', $headerHeight);
+
 $('.side-btn__wrap.bottom').css('--height', '42px');
 $('.side-btn__wrap.top').css('--height', '0px');
 const $headerOffsetTop = $('.header__nav').offset().top;

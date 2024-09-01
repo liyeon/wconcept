@@ -340,7 +340,7 @@ select {
   top: 10px;
   right: 10px;
   background-position: -330px 0;
-  z-index: 10;
+  z-index: 15;
 }
 .btn-wish.on {
   background-position: -360px 0;
@@ -1071,7 +1071,8 @@ select {
   width: 233px;
 }
 .sc-product__yours .card-item__thumb {
-  width: 233px;
+  position: relative;
+  width: 100%;
   height: 310px;
 }
 .sc-product__beauty {
