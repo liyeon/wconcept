@@ -7,6 +7,7 @@ const $navBtn = $('.header__nav-btn');
 const $navSub = $('.header__nav-sub');
 const $cateLink = $('.category__link');
 const $cateWrap = $('.category__wrap');
+const $searchBtn = $('.header__auth-link--search');
 $navBtn.hover(function () {
   // over
   $navBtn.addClass('on');
@@ -55,8 +56,10 @@ $(window).scroll(function (e) {
 
 	if($scrollTop >= $headerOffsetTop){
 		$('.header__nav').addClass('fixed');
+		$('.header').addClass('on');
 	}else{
 		$('.header__nav').removeClass('fixed');
+		$('.header').removeClass('on');
 	}
   // if ($scrollTop > 100) { // 스크롤이 100px 이상일 때
   //   $('.header__nav').addClass('fixed');
@@ -93,6 +96,11 @@ $('.side-btn__wrap.bottom .btn-arrow').on('click', function() {
 	return false; 
 });
 
+$($searchBtn).on('click', function() {
+	console.log('btn')
+	$(this).css('display','none');
+	$('.header__search').css('display','block');
+});
 
 // 메인 슬라이드
 const visual = new Swiper(".visualSwiper", {
@@ -113,7 +121,7 @@ const visual = new Swiper(".visualSwiper", {
 	speed:500,
 });
 const yours = new Swiper(".yoursSwiper", {
-	slidesPerView: 5,
+	slidesPerView: 4,
 	loop: true, // 루프 모드 활성화
 	loopAdditionalSlides : 1, 
 	spaceBetween: 20,
@@ -124,6 +132,9 @@ const yours = new Swiper(".yoursSwiper", {
 	},
 	speed:500,
 	breakpoints:{
+		1400:{
+			slidesPerView:5,
+		},
 		1600:{
 			slidesPerView:6,
 		},

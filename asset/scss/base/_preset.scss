@@ -37,7 +37,10 @@
 	position: fixed;
 	bottom: 40px;
 	right:50%;
-	margin-right: -896px;
+	margin-right: -48%;
+	@media (min-width: 1920px) {
+		margin-right: -894px;
+	}
 	@include column-flexbox;
 	gap: 6px;
 	button{
