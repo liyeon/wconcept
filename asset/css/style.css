@@ -674,6 +674,7 @@ select {
   gap: 20px;
 }
 .header__nav.fixed .inner .symbol {
+  display: block;
   padding-left: 60px;
 }
 .header__nav .inner {
@@ -688,6 +689,9 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   height: 57px;
+}
+.header__nav .inner .symbol {
+  display: none;
 }
 .header__nav-btn {
   position: absolute;
