@@ -1188,6 +1188,12 @@ select {
 .sc-product__beauty-wrap .beautySwiper .swiper-slide > a {
   position: relative;
 }
+.sc-product__beauty-wrap .beautySwiper .swiper-slide > a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .sc-product__beauty-wrap .beautySwiper .btn::after {
   background-position: -330px -30px;
 }
@@ -1488,7 +1494,7 @@ select {
   margin-top: 40px;
   padding: 0 10px;
 }
-.sc-product__wdna-tab--list {
+.sc-product__wdna-tab-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1499,20 +1505,26 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 25px;
+  display: none;
 }
-.sc-product__wdna-tab--item {
+.sc-product__wdna-tab-list.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sc-product__wdna-tab-item {
   position: relative;
 }
-.sc-product__wdna-tab--item .thumb {
+.sc-product__wdna-tab-item .thumb {
   aspect-ratio: 1/1;
 }
-.sc-product__wdna-tab--item .thumb img {
+.sc-product__wdna-tab-item .thumb img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sc-product__wdna-tab--item .insta {
+.sc-product__wdna-tab-item .insta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1531,7 +1543,7 @@ select {
   overflow: hidden;
   min-width: 0;
 }
-.sc-product__wdna-tab--item .insta .account {
+.sc-product__wdna-tab-item .insta .account {
   padding: 0 45px 0 25px;
   color: #fff;
   font-weight: 400;
@@ -1539,7 +1551,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
 }
-.sc-product__wdna-tab--item .insta .btn-wish {
+.sc-product__wdna-tab-item .insta .btn-wish {
   width: 18px;
   height: 18px;
   top: auto;
@@ -1605,6 +1617,10 @@ select {
 .sc-info__board-list {
   margin-top: 22px;
   padding-left: 18px;
+  display: none;
+}
+.sc-info__board-list.active {
+  display: block;
 }
 .sc-info__board-item {
   list-style: outside;
