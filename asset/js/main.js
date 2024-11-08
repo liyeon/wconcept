@@ -40,59 +40,104 @@ $navSub.hover(
   }
 );
 
-$($cateLink).hover(function (e) {
-  e.preventDefault();
-  //내가 선택한 데이터 값 중에 tab 이라는 데이터 값을 가져와라
-  const $tabName = $(this).data("tab");
-  $(this).addClass("on").siblings($cateLink).removeClass("on");
-  $($tabName).addClass("active").siblings($cateWrap).removeClass("active");
+// 기본 활성화 탭 설정
+const defaultTab = "#tab01";
+const defaultCategoryKey = "women";
 
-  let categoryKey = "";
-if ($tabName === "#tab01") {
-  categoryKey = "women";
-} else if ($tabName === "#tab02") {
-  categoryKey = "men";
-} else if ($tabName === "#tab03") {
-  categoryKey = "beauty";
-} else if ($tabName === "#tab04") {
-  categoryKey = "life";
-} else if ($tabName === "#tab05") {
-  categoryKey = "kids";
-} 
+// 기본 탭 활성화
+setActiveTab(defaultTab, defaultCategoryKey);
 
-fetch("./asset/data/nav.json")
-  .then((res) => res.json())
-  .then((json) => {
-    const categories = json.data[categoryKey].categories;
-    const data = categories;
-    const categoryWrap = document.querySelector($tabName);
-    const categoryBox = categoryWrap.querySelector(".category__list-box");
-    categoryBox.innerHTML = ""; 
+$cateLink.hover(
+  function (e) {
+    e.preventDefault();
 
-    data.forEach((category) => {
-      const categoryList = document.createElement("ul");
-      categoryList.className = "category__list";
-      
-      const titleItem = document.createElement("li");
-      titleItem.className = "category__item title";
-      titleItem.innerHTML = `<a href="#">${category.title}</a>`;
-      categoryList.appendChild(titleItem);
+    // 현재 data 값 가져오기
+    const $tabName = $(this).data("tab");
+    $(this).addClass("on").siblings($cateLink).removeClass("on");
+    $($tabName).addClass("active").siblings($cateWrap).removeClass("active");
 
-      category.items.forEach((item) => {
-        const listItem = document.createElement("li");
-        listItem.className = "category__item";
-        listItem.innerHTML = `<a href="#">${item}</a>`;
-        categoryList.appendChild(listItem);
+    let categoryKey = getCategoryKey($tabName);
+    loadCategoryData(categoryKey, $tabName);
+  },
+  function () {
+    // 현재 탭 있으면 탭 고정
+    const $currentTabName = $(this).data("tab");
+
+    // 아무 탭도 없으면 기본 탬
+    if (
+      !$cateLink.hasClass("on") ||
+      $cateLink.filter(".on").data("tab") !== $currentTabName
+    ) {
+      setActiveTab(defaultTab, defaultCategoryKey);
+    }
+  }
+);
+
+// 기본 탭 활성화 함수
+function setActiveTab(tab, categoryKey) {
+  $(tab).addClass("active").siblings($cateWrap).removeClass("active");
+  // filter - 특정 조건 필터링
+  $cateLink
+    .filter(`[data-tab="${tab}"]`)
+    .addClass("on")
+    .siblings($cateLink)
+    .removeClass("on");
+
+  // 기본 카테고리 로드 함수
+  loadCategoryData(categoryKey, tab);
+}
+
+// 카테고리 키, 탭
+function loadCategoryData(categoryKey, tab) {
+  fetch("./asset/data/nav.json")
+    .then((res) => res.json())
+    .then((json) => {
+      const categories = json.data[categoryKey].categories;
+      const categoryWrap = document.querySelector(tab);
+      const categoryBox = categoryWrap.querySelector(".category__list-box");
+      categoryBox.innerHTML = ""; // 기존 내용 초기화
+
+      categories.forEach((category) => {
+        const categoryList = document.createElement("ul");
+        categoryList.className = "category__list";
+
+        const titleItem = document.createElement("li");
+        titleItem.className = "category__item title";
+        titleItem.innerHTML = `<a href="#">${category.title}</a>`;
+        categoryList.appendChild(titleItem);
+
+        category.items.forEach((item) => {
+          const listItem = document.createElement("li");
+          listItem.className = "category__item";
+          listItem.innerHTML = `<a href="#">${item}</a>`;
+          categoryList.appendChild(listItem);
+        });
+
+        categoryBox.appendChild(categoryList);
       });
-
-      categoryBox.appendChild(categoryList);
+    })
+    .catch((error) => {
+      console.error("JSON 오류 발생:", error);
     });
-  })
-  .catch((error) => {
-    console.error("JSON 오류 발생:", error);
-  });
-});
+}
 
+// 탭 이름에 맞는 카테고리 키 반환 함수
+function getCategoryKey(tabName) {
+  switch (tabName) {
+    case "#tab01":
+      return "women";
+    case "#tab02":
+      return "men";
+    case "#tab03":
+      return "beauty";
+    case "#tab04":
+      return "life";
+    case "#tab05":
+      return "kids";
+    default:
+      return "women";
+  }
+}
 //header 축소
 // 초기 높이 설정
 const $headerHeight = $(".header").outerHeight();

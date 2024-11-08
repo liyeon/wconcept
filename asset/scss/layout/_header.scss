@@ -296,6 +296,7 @@
 					flex-wrap: wrap;
 					width: 1232px;
 					padding-left: 170px;
+					flex-direction: column;
 
 					&.active {
 						@include flexbox(start, start);
@@ -344,6 +345,9 @@
 					width: 177px;
 					min-width: 0;
 					padding: 0 20px 0 30px;
+					&-box{
+						display: flex;
+					}
 				}
 
 				&__item {
