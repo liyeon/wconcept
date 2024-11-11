@@ -26,6 +26,7 @@
 	color: $primary;
   text-align: center;
 	font-weight: $font-weight-semibold;
+	z-index: 20;
 }
 #skipNav a:focus,
 #skipNav a:active{
